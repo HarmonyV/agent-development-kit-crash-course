@@ -1,4 +1,5 @@
 import asyncio
+import os
 
 from dotenv import load_dotenv
 from google.adk.runners import Runner
@@ -6,7 +7,7 @@ from google.adk.sessions import DatabaseSessionService
 from memory_agent.agent import memory_agent
 from utils import call_agent_async
 
-load_dotenv()
+os.environ["GOOGLE_API_KEY"] = "AIzaSyBsW7VhRy95aua97WitMSx1B48iESYsczc" # <--- REPLACE
 
 # ===== PART 1: Initialize Persistent Session Service =====
 # Using SQLite database for persistent storage
